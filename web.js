@@ -5,7 +5,7 @@ var htmlfile = "index.html";
 var app = express.createServer(express.logger());
 
 app.get('/', function(req, res){
-  var html = fs.readFieSync(htmlfile).toString();
+  var html = fs.readFileSync(htmlfile).toString();
   res.send(html);
 });
 
